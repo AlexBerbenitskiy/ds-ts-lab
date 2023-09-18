@@ -17,6 +17,24 @@ interface friends {
     age: number
 }
 
+interface coleague1 {
+    name: string;
+    phone: string;
+    age: number
+}
+
+interface colleague2 {
+    name: string;
+    phone: string;
+    age: number
+}
+
+interface colleague3 {
+    name: string;
+    phone: string;
+    age: number
+}
+
 
 const friend1 = {
     name: "Paul Fleming",
