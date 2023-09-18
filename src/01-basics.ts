@@ -1,4 +1,11 @@
 // (Optional) Change the names below to your friends.
+
+interface Friend {
+    name: string;
+    phone: string;
+    age: number
+}
+
 interface friend1 {
     name: string;
     phone: string;
@@ -17,23 +24,42 @@ interface friends {
     age: number
 }
 
-interface coleague1 {
-    name: string;
-    phone: string;
-    age: number
-}
+interface Colleague {
+      name: String;
+    department: String;
+    contact: {
+      email: String;
+      extension: number;
+}}
+
+interface colleague1 {
+    name: String;
+    department: String;
+    contact: {
+      email: String;
+      extension: number;
+}}
 
 interface colleague2 {
-    name: string;
-    phone: string;
-    age: number
-}
+    name: String;
+    department: String;
+    contact: {
+      email: String;
+      extension: number;
+}}
 
 interface colleague3 {
-    name: string;
-    phone: string;
-    age: number
-}
+    name: String;
+    department: String;
+    contact: {
+      email: String;
+      extension: number;
+}}
+
+interface ColleagueHistory {
+    current: Colleague[],
+    former: Colleague[]
+  }
 
 
 const friend1 = {
@@ -78,8 +104,9 @@ const friend1 = {
       extension: 125,
     },
   };
-  const colleagues = {
+  export const colleagues : ColleagueHistory = {
     current: [colleague1, colleague2, colleague3],
+    
     former: [],
   };
   
