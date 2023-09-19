@@ -15,11 +15,6 @@ interface friend2 {
     age: number
 }
 
-interface friends {
-    name: string;
-    phone: string;
-    age: number
-}
 
 
 
@@ -62,8 +57,8 @@ const friend1 = {
     age: 31,
   };
   
-  const friends = [friend1, friend2];
-  //console.log(friends[1]);
+  export const friends = [friend1, friend2];
+  console.log(friends[1]);
   
   //   -------------------
   const colleague1 = {
@@ -92,11 +87,14 @@ const friend1 = {
       extension: 125,
     },
   };
-  export const colleagues : ColleagueHistory = {
-    current: [colleague1, colleague2, colleague3],
+ export const colleagues : ColleagueHistory = {
+  current: [colleague1, colleague2, colleague3],
     
-    former: [],
-  };
+  former: [],
+ };
   
+  //export const friends = [friend1, friend2];
+
+//export const colleagues = {colleague1, colleague2, colleague3};
   
   //console.log(colleagues.current[0]);
