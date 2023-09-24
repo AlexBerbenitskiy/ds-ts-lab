@@ -59,7 +59,7 @@ function highestExtension(cs: Colleague[]) { // Inferred retun type
   console.log(sortColleagues(colleagues.current, (a, b) => (a.contact.extension - b.contact.extension),3));
   console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length),1));
   console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length))); // NEW
-  
+
      function findFriends(friendsArray: Friend[], callback: (friend: Friend) => boolean): string[] {
      return friendsArray.filter(callback).map(friend => friend.name);
    }
@@ -67,3 +67,13 @@ function highestExtension(cs: Colleague[]) { // Inferred retun type
 
    console.log(findFriends(friends, (friend) => friend.name.startsWith('Pa')));
 console.log(findFriends(friends, (friend) => friend.age < 35));
+
+
+function addInterest(friend: Friend, interest: string): string[] {
+  const interests = friend.interests || []; // Use existing interests or create an empty array + checking if undefined
+  interests.push(interest);
+  friend.interests = interests; // Update interests
+  return interests;
+}
+
+console.log(addInterest(friends[0], 'Politics'));
